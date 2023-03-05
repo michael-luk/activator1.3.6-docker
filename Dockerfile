@@ -1,8 +1,8 @@
 FROM java:8
 
-MAINTAINER Jeroen Minnaert <jeroenminnaert@gmail.com>
+MAINTAINER Michael Lu <micluy@gmail.com>
 
-ENV ACTIVATOR_VERSION 1.3.7
+ENV ACTIVATOR_VERSION 1.3.6
 
 # Download and install Activator
 RUN wget --output-document /opt/typesafe-activator-$ACTIVATOR_VERSION.zip http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip
@@ -23,4 +23,4 @@ EXPOSE 9000
 ENTRYPOINT ["/opt/activator/activator", "-Dhttp.address=0.0.0.0"]
 
 # Default Command
-CMD ["ui"]
+CMD ["run"]
